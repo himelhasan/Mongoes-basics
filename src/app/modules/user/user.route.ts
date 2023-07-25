@@ -1,9 +1,10 @@
 import express from "express";
-import { createUser, getUsers } from "./user.controller";
+import { createUser, findUser, getUsers } from "./user.controller";
 
 const router = express.Router();
 
 // create user
-router.post("/create-user", createUser);
 router.get("/", getUsers);
+router.get("/find-a-user/:id", findUser);
+router.post("/create-user/", createUser);
 export default router;
