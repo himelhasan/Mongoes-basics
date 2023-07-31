@@ -12,14 +12,14 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const mongoose_1 = __importDefault(require("mongoose"));
+const mongoose = require("mongoose");
 const app_1 = __importDefault(require("./app"));
 const port = 5000;
 // database connection
 function main() {
     return __awaiter(this, void 0, void 0, function* () {
         try {
-            yield mongoose_1.default.connect("mongodb://127.0.0.1:27017/practice-mongoose");
+            yield mongoose.connect("mongodb://127.0.0.1:27017/practice-mongoose");
             console.log(`database connection established`);
             app_1.default.listen(port, () => {
                 console.log(`Server is listening on port ${port}`);

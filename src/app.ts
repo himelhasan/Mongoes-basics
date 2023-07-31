@@ -16,6 +16,10 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use("/api/v1/user", userRoutes);
 
+app.get("/", (req, res) => {
+  res.send("hello world!");
+});
+
 export default app;
 
 // breakdown process

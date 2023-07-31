@@ -14,6 +14,9 @@ app.use((0, cors_1.default)());
 app.use(express_1.default.json());
 app.use(express_1.default.urlencoded({ extended: true }));
 app.use("/api/v1/user", user_route_1.default);
+app.get("/", (req, res) => {
+    res.send("hello world!");
+});
 exports.default = app;
 // breakdown process
 /*
